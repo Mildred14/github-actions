@@ -1,0 +1,10 @@
+name: hello-world-actions
+on: [push]
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run script
+        run: hello.rb 
