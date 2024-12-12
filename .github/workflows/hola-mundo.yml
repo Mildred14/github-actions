@@ -11,5 +11,6 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
+          bundler-cache: true
       - name: Run script
         run: hello.rb
