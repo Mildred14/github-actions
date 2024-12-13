@@ -1,5 +1,4 @@
 name: Triggers
-run-name: Execute trigger action
 on:
   push:
     branches:
@@ -8,17 +7,18 @@ on:
       - '**.rb'
   pull_request:
     types:
-      - [opened]
+      - opened
+
 jobs:
   trigger_events:
     runs-on: ubuntu-latest
     steps:
-      - name: Create repo
-        uses: actions/checkout@v3
-      - name: Setup Ruby Pkgs
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.3'
-          bundler-cache: true
-      - name: Run hello script
-        run: ruby hello.rb
+    - name: Create repo
+      uses: actions/checkout@v3
+    - name: Setup Ruby Pkgs
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3'
+        bundler-cache: true
+    - name: Run hello script
+      run: ruby hello.rb
