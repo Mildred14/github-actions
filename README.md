@@ -20,7 +20,7 @@ _Aprende los conceptos básicos para crear tu primer flujo de CI/CD para tus pro
   Do not use quotes on the <details> tag attributes.
 -->
 
-<details id=0>
+<details id=0 open>
 <summary><h2>Bienvenido</h2></summary>
 
 ¡Bienvenido al Curso Básico de GitHub Actions de Platzi! en este curso aprenderás a realizar flujos de Integración y Despliegue Continúo (CI/CD) para tus proyectos personales, así como automatizar cualquier proceso que que te ayude a impulsar tu flujo de trabajo :rocket:.
@@ -119,7 +119,7 @@ Primero, aprenderemos los conceptos básicos de GitHub Actions
           run: python hola_mundo.py
   ```
 
-    
+
   </details>
 
 </details>
@@ -157,7 +157,7 @@ Ahora que conoces los componentes básicos de un workflow en GitHub Actions pode
 
   <details id=1.1>
   <summary><h3>Ayuda</h2></summary>
-    
+
   Agregue el siguiente contenido al archivo `triggers.yml`:
   ```yaml
   name: Triggers
@@ -234,7 +234,7 @@ _¡Buen trabajo usando los distintos eventos para lanzar nuevos workflows! :spar
 
 Ahora que conoces como lanzar distintos workflows con los principales tipos de eventos es importante sacar provecho del uso de _Expresiones_ en nuestros workflow files para obtener mayor versatilidad y opciones.
 
-**¿Qué son las expresiones?**: Es una forma de configurar variables de entorno y acceder al contexto. Usan una sintaxis especial ${{ <expresión> }} 
+**¿Qué son las expresiones?**: Es una forma de configurar variables de entorno y acceder al contexto. Usan una sintaxis especial ${{ <expresión> }}
 
 Puedes combinar valores literales, referencias de contexto y funciones usando operadores o condicionales.
 
@@ -248,7 +248,7 @@ Puedes combinar valores literales, referencias de contexto y funciones usando op
 
   <details id=1.1>
   <summary><h3>Ayuda</h2></summary>
-    
+
   Agregue el siguiente contenido al archivo `expresiones.yml`:
   ```yaml
   name: Expresiones
@@ -267,13 +267,13 @@ Puedes combinar valores literales, referencias de contexto y funciones usando op
           type: string
   jobs:
     mayor:
-      if: ${{ inputs.edad >= 18 }} 
+      if: ${{ inputs.edad >= 18 }}
       runs-on: ubuntu-latest
       steps:
         - name: Correr script
           run: echo ${{ inputs.nombre }} es mayor de edad
     menor:
-      if: ${{ inputs.edad < 18 }} 
+      if: ${{ inputs.edad < 18 }}
       runs-on: ubuntu-latest
       steps:
         - name: Correr script
@@ -320,7 +320,7 @@ Los más usados son:
 
   <details id=1.1>
   <summary><h3>Ayuda</h2></summary>
-    
+
   Agregue el siguiente contenido al archivo `contextos.yml`:
   ```yaml
   name: Contexto
@@ -363,7 +363,7 @@ El uso de variables de entorno es lo único que te falta por aprender de los pri
 
   <details id=1.1>
   <summary><h3>Ayuda</h2></summary>
-    
+
   Agregue el siguiente contenido al archivo `variables.yml`:
   ```yaml
   name: Saludo usando variables

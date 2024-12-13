@@ -1,0 +1,16 @@
+name: Learning Github Actions
+run-name: Learning Github Actions
+on: [push]
+jobs:
+  hola-mundo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Ruby Pkgs
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - name: Run script
+        run: ruby hello.rb
